@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    border: 2px solid #333;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+}
+
+/* Add additional styles/effects for each image if desired */
+.image:nth-child(1) {
+    filter: grayscale(100%); /* Grayscale effect on the first image */
+}
+
+.image:nth-child(2) {
+    filter: sepia(80%); /* Sepia effect on the second image */
+}
+
+.image:nth-child(3) {
+    filter: blur(4px); /* Apply blur effect on the third image */
+}
+
+.image:nth-child(4) {
+    filter: brightness(120%); /* Increase brightness on the fourth image */
+}
+
+.image:nth-child(5) {
+    /* Add a different effect to the fifth image if desired */
+}
