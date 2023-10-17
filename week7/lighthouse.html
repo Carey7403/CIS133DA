@@ -6,25 +6,39 @@
   <style>
       * { box-sizing: border-box; }
       body {
-        font-family:Verdana, Arial, sans-serif;
+        font-family: Verdana, Arial, sans-serif;
         background-color: #00005D;
       }
       #wrapper { 
         background-color: #b3c7e6; 
         width: 80%;
         margin: auto;
-        min-width:850px;
+        min-width: 850px;
       } 
-      nav { 
-        width: 150px;
-        padding: 20px;
-      } 
-      main { 
-        background-color: #FFFFFF;
-        padding: 20px;
+      nav {
+        overflow: hidden;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      nav li {
+        float: left;
+        margin-right: 20px;
+      }
+      nav a {
+        text-decoration: none;
+        color: #00005D;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 10px 15px;
         display: block;
-      } 
-      header{ 
+      }
+      nav a:hover, nav a:visited {
+        background-color: #869dc7;
+        color: #FFFFFF;
+      }
+      header { 
         background-color: #869dc7;
         color: #00005D; 
         font-size: 150%; 
@@ -35,18 +49,19 @@
       }
       h2 { 
         color: #869dc7; 
-        font-family: arial, sans-serif;
+        font-family: Arial, sans-serif;
       }
       main img { 
         margin: 10px;
+        float: right;
       }
       footer {
-        font-size:70%;
+        font-size: 70%;
         text-align: center;
-        clear: right;
-        padding-bottom:20px;
+        clear: both;
+        padding-bottom: 20px;
         background-color: #FFFFFF;
-      }	
+      }
   </style> 
 </head>
 <body>
@@ -55,13 +70,15 @@
       <h1>Lighthouse Island Bistro</h1>
     </header>
     <nav>
-      <a href="index.html">Home</a><br>
-      <a href="rooms.html">Menu</a><br>
-      <a href="directions.html">Directions</a><br>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Menu</a></li>
+        <li><a href="directions.html">Directions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
     <main> 
-      <img src="./images/lighthouse.jpg" width="250" height="355" id="floatright" alt="Lighthouse Island">
+      <img src="./images/lighthouse.jpg" width="250" height="355" alt="Lighthouse Island">
       <h2>Locally Roasted Free-Trade Coffee</h2>
       <p>Indulge in the aroma of freshly ground roast coffee. Specialty drinks are available hot or cold.</p>
       <h2>Specialty Pastries</h2>
@@ -75,5 +92,3 @@
   </div>
 </body>
 </html>
-
-
