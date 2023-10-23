@@ -4,13 +4,38 @@ body {
 }
 
 header { 
-    background-color: #002171;
+    background-color: #000033;
     background-image: url('images/sunset.jpg');
     background-position: right;
     background-repeat: no-repeat;
     color: #FFFFFF;
     font-family: Georgia, serif;
     height: 72px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:visited {
+    color: #000;
+}
+
+nav a:hover {
+    background-color: #ccc;
+    color: #fff;
 }
 
 nav { 
