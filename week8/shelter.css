@@ -7,6 +7,13 @@ body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr 75px;
+    grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
 }
 
 header, aside, main, footer {
@@ -15,12 +22,21 @@ header, aside, main, footer {
 }
 
 header {
+    grid-area: header;
     color: white;
     background-color: blue;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 aside {
+    grid-area: aside;
     background-color: yellow;
+    padding: 20px;
+    text-align: center;
 }
 
 aside > img {
@@ -28,14 +44,28 @@ aside > img {
 }
 
 main {
+    grid-area: main;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 footer {
+    grid-area: footer;
+    display: flex;
     color: white;
     background-color: blue;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-around;
 }
 
-header, footer {
+footer > div{
+    margin: 0 20px;
 }
 
 h1 {
@@ -55,6 +85,9 @@ p {
     background-color: lightblue;
     height: 200px;
     width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .amigo_div > img {
