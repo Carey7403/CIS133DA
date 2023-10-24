@@ -70,7 +70,8 @@ dt {
 }
 
 h1 {  
-    font-size: 1.5em;
+    font-size: 3em;
+    letter-spacing: 0.375em;
     text-align: center;
 }
 
@@ -97,4 +98,42 @@ h3 {
 
 #wrapper { 
     background-color: #FFFFFF;
+}
+@media (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        padding: 2.4em 0;
+    }
+
+    nav li {
+        border: none;
+        width: 14.4em; 
+        }
+
+    h1 {
+        font-size: 3em; 
+        letter-spacing: 0.375em; 
+        }
+
+    #homehero {
+        background-size: 100% 100%;
+    }
+}
+@media (min-width: 1024px) {
+    body {
+        background-image: linear-gradient(to bottom, white 20%, lightblue 60%, white 100%);
+    }
+
+    nav ul {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #wrapper {
+        width: 80vw;
+        margin-left: auto; 
+        margin-right: auto;
+    }
 }
