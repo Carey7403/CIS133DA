@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+    <style>
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #00FF00;  /* Green background for even weeks */
+        }
+
+        tfoot td {
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>My CIS133 Grades</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Week #</th>
+                <th>Pts Possible</th>
+                <th>Pts Actual</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Week 1</td><td>70</td><td>65</td></tr>
+            <tr><td>Week 2</td><td>80</td><td>68</td></tr>
+            <tr><td>Week 3</td><td>40</td><td>34</td></tr>
+            <tr><td>Week 4</td><td>40</td><td>36</td></tr>
+            <tr><td>Week 5</td><td>40</td><td>31</td></tr>
+            <tr><td>Week 6</td><td>40</td><td>29</td></tr>
+            <tr><td>Week 7</td><td>40</td><td>37</td></tr>
+            <tr><td>Week 8</td><td>100</td><td>91</td></tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>450</td>
+                <td>391</td>
+            </tr>
+            <tr>
+                <td colspan="3">Letter Grade: B (86%)</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
