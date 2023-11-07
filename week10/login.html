@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        .centered-table {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px; 
+        }
+    </style>
+</head>
+<body>
+
+<form id="loginForm">
+    <table class="centered-table">
+        <tr>
+            <td><label for="username">Type your Username</label></td>
+            <td><input 
+                    type="text" 
+                    name="Username" 
+                    id="txt_username" 
+                    maxlength="50" 
+                    tabindex="1" 
+                    placeholder="Username"
+                    style="width: 100px;"
+                >
+            </td>
+        </tr>
+        <tr>
+            <td><label for="password">Type your Password</label></td>
+            <td><input 
+                    type="password" 
+                    id="txt_password"
+                    name="Password" 
+                    maxlength="50" 
+                    tabindex="2" 
+                    placeholder="Password"
+                    style="width: 100px;"
+                >
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <input 
+                    name= "ResetButton"
+                    id="bttn_Reset" 
+                    type="reset" 
+                    value="Reset"
+                    style="width: 100px;"
+                    tabindex="3"
+                >
+
+                <input 
+                    name= "Submit" 
+                    id="bttn_Submit"
+                    type="submit" 
+                    value="Submit"
+                    style="width: 100px;"
+                    tabindex="3"
+                 >
+
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
