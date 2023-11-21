@@ -49,18 +49,21 @@
             let strTitle = prompt("What do you want the title of this page to be?");
             if (strTitle) {
                 document.title = strTitle;
+                alert("Title changed to: " + strTitle);
             }
         }
         function changeName() {
             let strName = prompt("Who is your favorite celebrity?");
             if (strName) {
                 document.getElementById("celebrity").textContent = strName;
+                alert("Favorite celebrity changed to: " + strName);
             }
         }
         function changeColor() {
             let strColor = prompt("What color do you want the background to be?");
             if (strColor) {
                 document.body.style.backgroundColor = strColor;
+                alert("Background color changed to: " + strColor);
             }
         }
     </script>
