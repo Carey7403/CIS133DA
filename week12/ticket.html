@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <div id="aa_logo">
         <img src="./images/animal_amigos_shelter.PNG" style="width:300px;" alt="Animals in Sombreros" />
     </div>
@@ -40,7 +39,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align:right;"">
+                <td colspan="2" style="text-align:right;">
                     <input type="button" value="Cancel" onclick="cancelTicket()" />
                     <input type="button" value="Print Ticket" onclick="printTicket()" />
                 </td>
@@ -62,5 +61,23 @@
             <p><span class="boldText" id="amigoName">???</span></p>
         </amigoInfo>
     </ticket>
+
+    <script>
+        function setUserInfo() {
+            const userName = prompt("Please provide your name:");
+            const visitDate = prompt("Please provide your visit date (e.g., 11/21/2023):");
+            const ownerName = document.getElementById("ownerName");
+            ownerName.textContent = userName;
+            const visitDateElement = document.getElementById("visitDate");
+            visitDateElement.textContent = visitDate;
+        }
+        function cancelTicket() {
+            window.close();
+        }
+        function printTicket() {
+            alert("Printing ticket...");
+        }
+        setUserInfo();
+    </script>
 </body>
 </html>
