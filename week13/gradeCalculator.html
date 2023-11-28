@@ -12,34 +12,27 @@
             border-spacing: 0px;
             margin-top: 50px;
         }
-
         thead, tfoot {
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             color: white;
             background-color: darkgreen;
         }
-        
         th, td {
             padding: 10px;
         }
-
         tbody {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-
         .nbr {
             text-align: right;
         }
-
         .sum {
             text-align: right;
             padding-right: 20px;
         }
-
         tbody > tr:nth-of-type(even) {
 	        background-color: lightgreen;
         }
-
         input[type=number] {
             width: 50px;
             text-align: right;
@@ -111,6 +104,38 @@
             </tr>
         </tfoot>
     </table>
-
+    <script>
+        var posTot = 0, actTot = 0, pctTot, strGrade;
+        var aryElms = document.getElementsByTagName('input');
+        for (var i = 0; i < aryElms.length; i++) {
+            if (aryElms[i].id.indexOf('pos') === 0) {
+                posTot += parseInt(aryElms[i].value);
+            }
+            if (aryElms[i].id.indexOf('act') === 0) {
+                actTot += parseInt(aryElms[i].value);
+            }
+        }
+        document.getElementById('posTot').innerText = posTot;
+        document.getElementById('actTot').innerText = actTot;
+        pctTot = parseInt((actTot / posTot) * 100);
+        switch (true) {
+            case (pctTot >= 90):
+                strGrade = 'A';
+                break;
+            case (pctTot >= 80):
+                strGrade = 'B';
+                break;
+            case (pctTot >= 70):
+                strGrade = 'C';
+                break;
+            case (pctTot >= 60):
+                strGrade = 'D';
+                break;
+            default:
+                strGrade = 'F';
+                break;
+        }
+        document.getElementById('myGrade').innerText = `Letter Grade: ${strGrade} (${pctTot}%)`;
+    </script>
 </body>
 </html>
