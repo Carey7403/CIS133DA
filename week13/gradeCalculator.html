@@ -37,6 +37,10 @@
             width: 50px;
             text-align: right;
         }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -104,38 +108,43 @@
             </tr>
         </tfoot>
     </table>
+    <div class="button-container">
+        <button type="button" onclick="calculateScore()">Calculate</button>
+    </div>
     <script>
-        var posTot = 0, actTot = 0, pctTot, strGrade;
-        var aryElms = document.getElementsByTagName('input');
-        for (var i = 0; i < aryElms.length; i++) {
-            if (aryElms[i].id.indexOf('pos') === 0) {
-                posTot += parseInt(aryElms[i].value);
+        function calculateScore() {
+            var posTot = 0, actTot = 0, pctTot, strGrade;
+            var aryElms = document.getElementsByTagName('input');
+            for (var i = 0; i < aryElms.length; i++) {
+                if (aryElms[i].id.indexOf('pos') === 0) {
+                    posTot += parseInt(aryElms[i].value);
+                }
+                if (aryElms[i].id.indexOf('act') === 0) {
+                    actTot += parseInt(aryElms[i].value);
+                }
             }
-            if (aryElms[i].id.indexOf('act') === 0) {
-                actTot += parseInt(aryElms[i].value);
+            document.getElementById('posTot').innerText = posTot;
+            document.getElementById('actTot').innerText = actTot;
+            pctTot = parseInt((actTot / posTot) * 100);
+            switch (true) {
+                case (pctTot >= 90):
+                    strGrade = 'A';
+                    break;
+                case (pctTot >= 80):
+                    strGrade = 'B';
+                    break;
+                case (pctTot >= 70):
+                    strGrade = 'C';
+                    break;
+                case (pctTot >= 60):
+                    strGrade = 'D';
+                    break;
+                default:
+                    strGrade = 'F';
+                    break;
             }
+            document.getElementById('myGrade').innerText = `Letter Grade: ${strGrade} (${pctTot}%)`;
         }
-        document.getElementById('posTot').innerText = posTot;
-        document.getElementById('actTot').innerText = actTot;
-        pctTot = parseInt((actTot / posTot) * 100);
-        switch (true) {
-            case (pctTot >= 90):
-                strGrade = 'A';
-                break;
-            case (pctTot >= 80):
-                strGrade = 'B';
-                break;
-            case (pctTot >= 70):
-                strGrade = 'C';
-                break;
-            case (pctTot >= 60):
-                strGrade = 'D';
-                break;
-            default:
-                strGrade = 'F';
-                break;
-        }
-        document.getElementById('myGrade').innerText = `Letter Grade: ${strGrade} (${pctTot}%)`;
     </script>
 </body>
 </html>
