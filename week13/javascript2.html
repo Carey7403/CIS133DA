@@ -40,7 +40,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align:right;"">
+                <td colspan="2" style="text-align:right;">
                     <input type="button" value="Cancel" onclick="cancelTicket()" />
                     <input type="button" value="Print Ticket" onclick="printTicket()" />
                 </td>
@@ -62,20 +62,41 @@
             <p><span class="boldText" id="amigoName">???</span></p>
         </amigoInfo>
     </ticket>
+
+    <script lang="javascript">
+        var name = window.prompt('Enter your first name');
+        var date = window.prompt('Enter the date you want to visit');
+        document.title = `${name}'s Ticket to Animal Amigos`;
+        document.getElementById('ownerName').innerText = name;
+        document.getElementById('visitDate').innerText = date;
+
+        function printTicket() {
+            var amigoName = document.getElementById('amigo_name').value;
+            var amigoType = document.getElementById('amigo_type').value;
+
+            var amigoSizes = document.getElementsByName('amigo_size');
+            var amigoSize;
+            for (var i = 0; i < amigoSizes.length; i++) {
+                if (amigoSizes[i].checked) {
+                    amigoSize = amigoSizes[i].value;
+                    break;
+                }
+            }
+
+            document.getElementById('amigoName').innerText = amigoName;
+
+            var imageSrc = `./images/${amigoType}_${amigoSize}.png`;
+            document.getElementById('amigoPicture').src = imageSrc;
+
+            document.getElementById('amigoPicture').style.height = '150px';
+            document.getElementById('form').style.display = 'none';
+            alert('Your ticket is ready to be printed!');
+        }
+
+        function cancelTicket() {
+            window.close();
+        }
+    </script>
+
 </body>
-
-<script lang="javascript">
-
-    var name = window.prompt('Enter your first name');
-    var date = window.prompt('Enter the date you want to visit');
-    document.title = `${name}'s Ticket to Animal Amigos`;
-    document.getElementById('ownerName').innerText = name;
-    document.getElementById('visitDate').innerText = date;
-
-    function cancelTicket() {
-        window.close();
-    }
-
-</script>
-
 </html>
