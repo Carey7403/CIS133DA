@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Cancun Trip - Travel World</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .centered-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%; 
+            max-width: 100%; 
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Your Cancun Adventure</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="booking.html" class="active">Booking</a></li>
+                <li><a href="tips.html">Travel Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="booking-intro">
+            <h2>Book Your Dream Vacation Now</h2>
+            <p>Experience the beauty of Cancun in Summer 2024. Fill out the form below to reserve your spot.</p>
+            <img src="images/cancun.jpeg" alt="Cancun" class="centered-image">
+        </section>
+        <section class="booking-form">
+            <form action="submit-booking.html" method="post">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="travelDates">Travel Dates:</label>
+                <input type="text" id="travelDates" name="travelDates" placeholder="MM/DD/YYYY - MM/DD/YYYY" required>
+
+                <label for="numberOfGuests">Number of Guests:</label>
+                <input type="number" id="numberOfGuests" name="numberOfGuests" min="1" required>
+
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType">
+                    <option value="standard">Standard</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="suite">Suite</option>
+                </select>
+
+                <label for="specialRequests">Special Requests:</label>
+                <textarea id="specialRequests" name="specialRequests" rows="4" cols="50"></textarea>
+
+                <input type="submit" value="Book Now">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Travel World - Your Gateway to Cancun</p>
+    </footer>
+</body>
+</html>
